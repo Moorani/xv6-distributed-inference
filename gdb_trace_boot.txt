@@ -1,0 +1,9 @@
+Script started on 2026-09-22 15:24:20+05:00 [COMMAND="./boot-gdb.sh" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="156" LINES="41"]
+
+xv6 kernel is booting
+
+Scheduler: Round Robin (Default)
+init: starting sh
+$ QEMU: Terminated
+
+Script done on 2026-09-22 15:31:46+05:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,56 @@
+Script started on 2026-09-22 15:24:34+05:00 [COMMAND="gdb-multiarch kernel/kernel" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="170" LINES="40"]
+[35;49;1;23;24;27mGNU gdb (Ubuntu 17.1-2ubuntu1) 17.1[m
+Copyright (C) 2025 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32;49;22;23;24;27mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "[39;49;1;23;24;27mshow copying[m" and "[39;49;1;23;24;27mshow warranty[m" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "[39;49;1;23;24;27mshow configuration[m" for configuration details.
+For bug reporting instructions, please see:
+[32;49;22;23;24;27m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32;49;22;23;24;27mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "[39;49;1;23;24;27mhelp[m".
+Type "[39;49;1;23;24;27mapropos word[m" to search for commands related to "word"...
+Reading symbols from [32;49;22;23;24;27mkernel/kernel[m...
+(No debugging symbols found in [32;49;22;23;24;27mkernel/kernel[m)
+[?2004h(gdb) [7mtarget remote localhost:26000[27m[C[C[C[C[C[Ctarget remote localhost:26000
+[?2004lRemote debugging using localhost:26000
+[34;49;22;23;24;27m0x0000000000001000[m in [33;49;22;23;24;27m??[m ()
+[?2004h(gdb) target remote localhost:26000[C[C[C[C[C[C[Ktarget remote localhost:26000[C[C[C[C[C[C[K[7mbreak sys_exec[27m[C[C[C[C[C[Cbreak sys_exec
+[?2004lBreakpoint 1 at [34;49;22;23;24;27m0x80005856[m
+[?2004h(gdb) continue
+[?2004lContinuing.
+
+Breakpoint 1, [34;49;22;23;24;27m0x0000000080005856[m in [33;49;22;23;24;27msys_exec[m ()
+[?2004h[?2004l[?2004h(gdb) [7mbacktrace[27m[C[C[C[C[C[Cbacktrace
+[?2004l#0  [34;49;22;23;24;27m0x0000000080005856[m in [33;49;22;23;24;27msys_exec[m ()
+#1  [34;49;22;23;24;27m0x00000000800014dc[m in [33;49;22;23;24;27msyscall[m ()
+#2  [34;49;22;23;24;27m0x0000000080001224[m in [33;49;22;23;24;27musertrap[m ()
+#3  [34;49;22;23;24;27m0x0000003ffffff124[m in [33;49;22;23;24;27m??[m ()
+[?2004h(gdb) [7minfo registers a0 a1 a2[27m[C[C[C[C[C[Cinfo registers a0 a1 a2
+[?2004la0             0x1	1
+a1             0x3fffffbdf8	274877890040
+a2             0x1	1
+[?2004h(gdb) sepi[K[K[K[Kinfo registers a0 a1 a2[C[C[C[C[C[C[14Pbacktrace[C[C[C[C[C[C[1Pcontinu[C[C[C[C[C[C[Cbreak sys_exec[C[C[C[C[C[Ctarget remote localhost:26000[C[C[C[C[C[C[15Pbreak sys_exec[C[C[C[C[C[C[6Pcontinue[C[C[C[C[C[C[1@backtrac[C[C[C[C[C[C[Cinfo registers a0 a1 a2[C[C[C[C[C[C[K[7mstepi[27mstepi
+[?2004l[34;49;22;23;24;27m0x000000008000142c[m in [33;49;22;23;24;27margaddr[m ()
+[?2004h[?2004l[?2004h(gdb) [7mstepi[27mstepi
+[?2004l[34;49;22;23;24;27m0x000000008000142e[m in [33;49;22;23;24;27margaddr[m ()
+[?2004h[?2004l[?2004h(gdb) continue
+[?2004lContinuing.
+^C
+Program received signal SIGINT, Interrupt.
+[34;49;22;23;24;27m0x0000000080006bda[m in [33;49;22;23;24;27mscheduler[m ()
+[?2004h[?2004l[?2004h(gdb) quit
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 1] will be detached.
+
+Quit anyway? (y or n) y
+[?2004lDetaching from program: [32;49;22;23;24;27m/home/sudharth/projects/Milestone-1-/xv6-riscv/kernel/kernel[m, process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+
+Script done on 2026-09-22 15:27:16+05:00 [COMMAND_EXIT_CODE="0"]
