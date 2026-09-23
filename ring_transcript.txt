@@ -1,0 +1,39 @@
+Script started on 2026-09-22 14:53:48+05:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="131" LINES="28"]
+[?2004h]0;sudharth@DESKTOP-EEOUJK5: ~/projects/Milestone-1-[01;32msudharth@DESKTOP-EEOUJK5[00m:[01;34m~/projects/Milestone-1-[00m$ [7msource .venv/bin/activate[27msource .venv/bin/activate
+[?2004l[?2004h(.venv) ]0;sudharth@DESKTOP-EEOUJK5: ~/projects/Milestone-1-[01;32msudharth@DESKTOP-EEOUJK5[00m:[01;34m~/projects/Milestone-1-[00m$ [7mpython3 server/distinf_sim.py --workers 2 --model 1 --steps 32 \[27m
+[7m  --prompt "Once upon a time" --smp 2 --shard-timeout 1800[27m[Apython3 server/distinf_sim.py --workers 2 --model 1 --steps 32 \
+  --prompt "Once upon a time" --smp 2 --shard-timeout 1800
+[?2004l[sim] staging 3 prebuilt node image(s)...
+[sim] starting host mcast switch (weight server on the segment)...
+[sim] booting 3 node(s) (timeout 240s each)...
+[sim] master: expecting 2 worker(s), model 1 (stories15M), 32 tokens
+[sim] OK  worker1 registered (0.6s)
+[sim] OK  worker2 registered (0.4s)
+[sim] OK  2 worker(s) registered (serialized)
+[sim] OK  layers assigned
+[sim] OK  worker2 shard resident (42s)
+[sim] OK  worker1 shard resident (42s)
+[sim] OK  all shards resident -- generating
+
+[sim] ==== generated ====
+Once upon a time , there was a little girl named L ily . She loved to play outside in the sun sh ine . One day , she saw a big
+[sim] ===================
+[sim] ==================== run summary ====================
+[sim]  topology      master 10.0.0.2 + 2 worker(s) | model 1 (stories15M) | 32 steps
+[sim]  build         3 image(s) in 0s
+[sim]  boot          master 2s | worker1 2s | worker2 3s
+[sim]  registration  worker1 0.6s | worker2 0.4s   (serialized)
+[sim]  layers        w1 [0,3) | w2 [3,6)
+[sim]  shard fetch   worker2 42s | worker1 42s
+[sim]  final ring    2/2 worker(s)
+[sim]  generation    32 token(s) in 29.2s
+[sim]  latency       latency/token (avg over 32): ring rtt 657844 us = compute 242845 us + network 414999 us | master 245635 us | 1.5 tok/s
+[sim]  rpc drops     malformed 0 | rate-limited 0 | bad-prog 0 | unknown-proc 0
+[sim]  logs          /tmp/distinf_sim/{master,worker1..N}.log
+[sim]  result        PASS
+[sim] =====================================================
+[sim] PASS
+[?2004h(.venv) ]0;sudharth@DESKTOP-EEOUJK5: ~/projects/Milestone-1-[01;32msudharth@DESKTOP-EEOUJK5[00m:[01;34m~/projects/Milestone-1-[00m$ [7mexit[27mexit
+[?2004lexit
+
+Script done on 2026-09-22 14:57:20+05:00 [COMMAND_EXIT_CODE="0"]
